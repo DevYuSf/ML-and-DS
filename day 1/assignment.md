@@ -9,6 +9,7 @@ Answer:
 Machine learning is like computer learning from data which gives you a smarter answer for his own which mean he finds a sample question like your question and gives you the answer that he learns from the data that he already have.
 **real example:** you give your machine 2+2 = 4
 and someone asked your machine 2+2 he gives 4 because you already told it.
+(Reference: [1])
 
 ---
 
@@ -25,6 +26,7 @@ that is a supervised learning the next word already know or predict.
 **Real World Example:**
 when you are using your phone and usually you type **AsxaapTa waan idin salaamay**
 the next time you time **AsxaapTa waan ...** it automatically filled **idin salaamay** because it uses **UnSupervised learning** it learned through your daily habit
+(Reference: [2])
 ---
 
 ## Question three is
@@ -67,6 +69,8 @@ Ensembling
 Ensembling combines predictions from several separate machine learning algorithms. Some models are called weak learners because their results are often inaccurate. Ensemble methods combine all the weak learners to get more accurate results. They use multiple models to analyze sample data and pick the most accurate outcomes. The two main ensemble methods are bagging and boosting. Boosting trains different machine learning models one after another to get the final result, while bagging trains them in parallel.
 Data augmentation
 Data augmentation is a machine learning technique that changes the sample data slightly every time the model processes it. You can do this by changing the input data in small ways. When done in moderation, data augmentation makes the training sets appear unique to the model and prevents the model from learning their characteristics. For example, applying transformations such as translation, flipping, and rotation to input images.
+(Reference: [3,4])
+---
 
 ## Question four is
 
@@ -113,17 +117,22 @@ Training data = Classroom teaching
 Validation data = Practice problems
 
 Testing data = Exam questions
+(Reference: [5])
+---
 
 ## Question five is
 
 - **Find one case study (research paper or article) that explains how Machine Learning has been applied in healthcare, business, or transportation. Summarize its findings.**
 Answer:
 this is  article that is a case study of how machine learning has been applied i healhcare also it has it's Summrized key findings.
+(Reference: [6])
+
+---
 
 ## references
 
 1. <https://cloud.google.com/learn/what-is-machine-learning?hl=en#machine-learning-defined>
-2. <https://www.tableau.com/learn/articles/machine-learning-examples#:~:text=Facial%20recognition%20is%20one%20of,or%20sexual%20exploitation%20of%20children>.
+2. [<https://www.tableau.com/learn/articles/machine-learning-examples#:~:text=Facial%20recognition%20is%20one%20of,or%20sexual%20exploitation%20of%20children>.](https://www.tableau.com/learn/articles/machine-learning-examples#:~:text=Facial%20recognition%20is%20one%20of,or%20sexual%20exploitation%20of%20children)
 3. <https://developers.google.com/machine-learning/crash-course/overfitting/overfitting>
 4. <https://aws.amazon.com/what-is/overfitting/#:~:text=Overfitting%20is%20an%20undesirable%20machine,%E2%80%A2>
 5. <https://www.linkedin.com/pulse/why-do-we-need-data-splitting-utkarsh-sharma/>
