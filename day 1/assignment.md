@@ -16,7 +16,6 @@ and someone asked your machine 2+2 he gives 4 because you already told it.
 ## Question two is
 
 - **Compare Supervised Learning and Unsupervised Learning, giving an example of each.**
-
 Answer:
 **Supervised learning** is a know data, which mean is already know the ourput of the question for example if you are in a math class and th teacher teaches you 5 times 5 equal to 25 and you rpeat it that data is supervised
 **Real World Example:**
@@ -27,6 +26,7 @@ that is a supervised learning the next word already know or predict.
 when you are using your phone and usually you type **AsxaapTa waan idin salaamay**
 the next time you time **AsxaapTa waan ...** it automatically filled **idin salaamay** because it uses **UnSupervised learning** it learned through your daily habit
 (Reference: [2])
+
 ---
 
 ## Question three is
@@ -54,9 +54,7 @@ Cross-validation is one of the testing methods used in practice. In this method,
 1. Keep one subset as the validation data and train the machine learning model on the remaining K-1 subsets.
 2. Observe how the model performs on the validation sample.
 3. Score model performance based on output data quality.
-
 Iterations repeat until you test the model on every sample set. You then average the scores across all iterations to get the final assessment of the predictive model.
-
 How can you prevent overfitting?
 You can prevent overfitting by diversifying and scaling your training data set or using some other data science strategies, like those given below.
 Early stopping
@@ -70,6 +68,7 @@ Ensembling combines predictions from several separate machine learning algorithm
 Data augmentation
 Data augmentation is a machine learning technique that changes the sample data slightly every time the model processes it. You can do this by changing the input data in small ways. When done in moderation, data augmentation makes the training sets appear unique to the model and prevents the model from learning their characteristics. For example, applying transformations such as translation, flipping, and rotation to input images.
 (Reference: [3,4])
+
 ---
 
 ## Question four is
@@ -117,7 +116,9 @@ Training data = Classroom teaching
 Validation data = Practice problems
 
 Testing data = Exam questions
+
 (Reference: [5])
+
 ---
 
 ## Question five is
