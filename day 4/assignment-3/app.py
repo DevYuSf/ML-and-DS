@@ -102,16 +102,19 @@ df["Car_Status"] =  [StatusOfCar_fun(c) for c in df["Car_Age"]]
 df["Is_High_Mileage"] = df["Odometer_km"] > 200000
 #let's convert into int because now it's a true or false
 df["Is_High_Mileage"] = df["Is_High_Mileage"].astype(int)
+#also adding is get accidents
+df["Is_Accident"] = (df["Accidents" ]> 0).astype(int)
+
 #also let's make one-hot encoding for the car status since now is old, normal and new
 
 df = pd.get_dummies(df, columns=["Car_Status"], drop_first=False, dtype="int")
 
-# print(df.head(20))
+print(df.head(20))
 
-# 9) Feature scaling (X only; keep targets & dummies unscaled)
+# 9) Feature scaling (X only; keep targets & dummies unscaled) # this part i sed chatGPT since i didn't get it but now i understand it well and i will review it I.a
 dont_scale = {"Price"}  # target
 exclude = ["Is_High_Mileage", "Car_Status_New", "Car_Status_Normal", "Car_Status_Old", 
-           "Location_City", "Location_Rural", "Location_Suburb"]
+           "Location_City", "Location_Rural", "Location_Suburb","Is_Accident"]
 
 numeric_cols = df.select_dtypes(include=["int64", "float64"]).columns.to_list()
 num_features_to_scale = [c for c in numeric_cols if c not in dont_scale and c not in exclude]
