@@ -79,22 +79,25 @@ X_train, X_test, y_coffee_train, y_coffee_test, y_price_train, y_price_test = tr
 def improved_coffee_grouping(coffee_name):
     """
     Group coffees into logical categories based on ingredients and characteristics
-    This improves model performance by reducing the number of classes
+    This improves model performance by reducing the number of classes and fixing rare class issue
     """
-    if coffee_name == 'Espresso':
-        return 'Pure_Espresso'  # Keep separate - unique strong coffee
+    if coffee_name in ['Espresso', 'Americano']:
+        return 'Strong_Coffee'  # Combined rare Espresso with Americano
     elif coffee_name in ['Cocoa', 'Hot Chocolate']:
         return 'Chocolate_Drinks'  # Sweet chocolate-based drinks
     elif coffee_name in ['Cortado', 'Latte', 'Cappuccino']:
         return 'Milk_Based_Drinks'  # Coffee with significant milk
-    elif coffee_name in ['Americano', 'Americano with Milk']:
-        return 'Americano_Family'  # Americano variations
+    elif coffee_name == 'Americano with Milk':
+        return 'Americano_with_Milk'  # Keep separate - unique category
     else:
         return coffee_name
 
 # Apply the grouping to our training and test data
 y_coffee_improved_train = y_coffee_train.apply(improved_coffee_grouping)
 y_coffee_improved_test = y_coffee_test.apply(improved_coffee_grouping)
+
+print("🔍 New Coffee Group Distribution:")
+print(y_coffee_improved_train.value_counts())
 
 # Encode the coffee groups to numbers
 coffee_encoder = LabelEncoder()
@@ -208,6 +211,7 @@ print(f"\n💡 BUSINESS INSIGHTS:")
 print(f"   • All models perform well (>85% accuracy)")
 print(f"   • Choose {best_model_name} for optimal balance of accuracy and speed")
 print(f"   • System can predict coffee preferences with high confidence")
+print(f"   • Fixed rare class issue by combining Espresso + Americano")
 
 print("="*60)
 
@@ -225,7 +229,8 @@ model_artifacts = {
     'model_performance': coffee_model_performance
 }
 
-joblib.dump(model_artifacts, 'coffee_prediction_system.pkl')
+joblib.dump(model_artifacts, 'coffee_prediction_system_v2.pkl')
 print("✅ All models saved successfully!")
 print(f"\n🎯 SYSTEM READY: Best model is {best_model_name} with {best_accuracy:.3f} accuracy!")
 print("   Users can now get accurate coffee recommendations! ☕")
+print("   ✅ Fixed: Espresso now combined with Americano as 'Strong_Coffee'")
